@@ -67,8 +67,9 @@ button {
 /* ======= HEADER ======= */
 
 .header {
-  padding-top: 24px;
-  padding-bottom: 25px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border: 1px solid #ececec;
 }
 .header-container {
   display: flex;
