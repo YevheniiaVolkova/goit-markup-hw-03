@@ -9,16 +9,20 @@ h2,
 h3,
 h4,
 h5,
-p{
+p {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 ul,
-ol{
+ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
+}
+
+img {
+  display: block;
 }
 
 .list {
@@ -33,13 +37,36 @@ body {
   font-family: var(--main-font);
 }
 
-/* ======= HEADER ======= */
-.header-container {
-  outline: 2px solid tomato;
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  align-items: center;
 }
 
-.header {
-  background: #ffffff;
+button {
+  border: transparent;
+}
+/* ======= HEADER ======= */
+
+.header{
+  padding-top: 24px ;
+  padding-bottom: 25px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigation-site {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item:not(:last-child) {
+  margin-right: 50px;
 }
 .header-name-site {
   font-family: var(--secondary-font);
@@ -48,10 +75,25 @@ body {
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: black;
+  margin-right: 95px;
 }
 
 .first-part-name-site {
   color: var(--accent-color);
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.header-contact {
+  display: flex;
+  
+}
+
+.header-contact-item{
+margin-right: not(last-child): 50px;
 }
 .menu-link {
   font-weight: 500;
@@ -64,13 +106,23 @@ body {
 .menu-link:focus {
   color: var(--accent-color);
 }
-.header-mail-link,
+.header-mail-link{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: #757575;
+  margin-right: 50px;
+}
+
 .header-tel-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+
+
 }
 .header-mail-link:hover,
 .header-mail-link:focus,
@@ -80,15 +132,11 @@ body {
 }
 /* ======= END HEADER ======= */
 
-.main {
-  outline: 2px solid violet;
-  padding: 0 15px;
-}
+
 
 /* ======= HERO ======= */
 .hero {
   background: #2f303a;
-  outline: 2px solid green;
 }
 
 .hero-title {
@@ -103,12 +151,9 @@ body {
   padding: 200px 452px 280px 452px;
 }
 
-button {
-  border: transparent;
-}
+
 .modal-btn {
   display: inline-block;
-  min-width: 200px;
   font-weight: bold;
   font-size: 16px;
   line-height: 1.87;
@@ -233,8 +278,9 @@ button {
 
 /* ======= PORTFOLIO ======= */
 
-.filter-portfolio-item {
-  display: inline-block;
+.filter-portfolio-list {
+  display: flex;
+  align-items: center;
 }
 .name-portfolio {
   display: none;
@@ -269,8 +315,9 @@ button {
   color: #212121;
 }
 
-.project-item {
-  display: inline-block;
+.project-list {
+  display: flex;
+  align-items: center;
 }
 
 .project-about {
