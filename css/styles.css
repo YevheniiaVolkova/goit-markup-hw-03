@@ -123,6 +123,10 @@ button {
 .menu-link:focus {
   color: var(--accent-color);
 }
+
+.current {
+  color: var(--accent-color);
+}
 .header-mail-link {
   font-weight: 500;
   font-size: 14px;
@@ -149,9 +153,21 @@ button {
 
 /* ======= HERO ======= */
 .hero {
-  background: #2f303a;
+  height: 600px;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgb(47, 48, 58, 0.4),
+      rgb(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-title {
@@ -253,8 +269,8 @@ button {
 }
 
 .profile-team {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 .team-member {
   font-weight: 500;
@@ -339,6 +355,16 @@ button {
 .name-portfolio {
   display: none;
 }
+
+.filter-portfolio-btn:hover,
+.filter-portfolio-btn:focus {
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
+}
+
 .filter-portfolio-name {
   display: none;
 }
@@ -395,8 +421,8 @@ button {
 .portfolio-list-box {
   padding-left: 24px;
   padding-right: 24px;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .project-about {
   font-weight: normal;
