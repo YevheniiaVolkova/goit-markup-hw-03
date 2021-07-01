@@ -127,6 +127,18 @@ button {
 .current {
   color: var(--accent-color);
 }
+.header-contact-icon-mail {
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: #757575;
+}
+.header-contact-icon-tel {
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: #757575;
+}
 .header-mail-link {
   font-weight: 500;
   font-size: 14px;
@@ -134,6 +146,8 @@ button {
   letter-spacing: 0.02em;
   color: #757575;
   margin-right: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .header-tel-link {
@@ -142,12 +156,19 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: #757575;
+  display: flex;
+  align-items: center;
 }
 .header-mail-link:hover,
 .header-mail-link:focus,
 .header-tel-link:hover,
-.header-tel-link:focus {
+.header-tel-link:focus,
+.header-link:focus .header-contact-icon-mail,
+.header-link:hover .header-contact-icon-mail,
+.header-link:focus .header-contact-icon-tel,
+.header-link:hover .header-contact-icon-tel {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 /* ======= END HEADER ======= */
 
@@ -164,10 +185,11 @@ button {
       rgb(47, 48, 58, 0.4),
       rgb(47, 48, 58, 0.4)
     ),
-    url(../images/hero.jpg);
+    url(../images/hero/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: rgb(47, 48, 58);
 }
 
 .hero-title {
@@ -207,7 +229,21 @@ button {
 /* ======= END ======= */
 
 /* ======= ADVANTAGES ======= */
+.advantage-list-icon {
+  width: 70px;
+  height: 70px;
+}
 
+.advantages-list-link {
+  background: #f5f4fa;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .advantages-list {
   display: flex;
   flex-wrap: wrap;
@@ -266,6 +302,8 @@ button {
   margin-top: 30px;
   margin-left: 30px;
   flex-basis: calc((100% - 120px) / 4);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .profile-team {
@@ -288,8 +326,91 @@ button {
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 16px;
+}
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: rgba(175, 177, 184, 1);
+  width: 44px;
+  height: 44px;
+}
+.social-list-link:focus,
+.social-list-link:hover {
+  fill: white;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+.social-list-icon {
+  width: 20px;
+  height: 20px;
 }
 /* ======= END TEAM ======= */
+
+/* ======= CUSTOMERS ======= */
+
+.customers-list {
+  display: flex;
+  justify-content: space-between;
+}
+.customers-list-item {
+  border-radius: 5%;
+  border: 1px solid rgba(175, 177, 184, 1);
+  width: 170px;
+  height: 92px;
+}
+
+.customers-list-item:hover,
+.customers-list-item:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.customers-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 92px;
+  fill: rgba(175, 177, 184, 1);
+}
+
+.customers-list-link:hover,
+.customers-list-link:focus {
+  fill: var(--accent-color);
+}
+
+.icon-yaco {
+  width: 41px;
+  height: 47px;
+}
+.icon-tagline-here {
+  width: 40px;
+  height: 52px;
+}
+.icon-company {
+  width: 43px;
+  height: 41px;
+}
+.icon-foster-peters {
+  width: 84px;
+  height: 41px;
+}
+.icon-brand {
+  width: 62px;
+  height: 45px;
+}
+.icon-company-tagline {
+  width: 94px;
+  height: 44px;
+}
+/* ======= END CUSTOMERS ======= */
 
 /* ======= FOOTER ======= */
 
@@ -300,12 +421,14 @@ button {
 }
 
 .footer-name-site {
+  display: block;
   font-family: var(--secondary-font);
   font-weight: bold;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   color: #ffffff;
+  margin-bottom: 20px;
 }
 .footer-address-link {
   font-weight: normal;
@@ -316,16 +439,44 @@ button {
 }
 
 .footer-address {
-  margin-top: 20px;
+  margin-bottom: 9px;
 }
 
-.footer-contact {
-  margin-top: 9px;
+.footer-contact-item:not(:last-child) {
+  margin-bottom: 9px;
 }
-.footer-contact-item:not(:first-child) {
-  margin-top: 9px;
+.footer-address-block {
+  margin-right: 70px;
 }
 
+.footer-join-name {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.footer-social-list-icon {
+  fill: white;
+}
+
+.footer-social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-list-link:hover,
+.footer-social-list-link:focus {
+  background-color: var(--accent-color);
+}
 .footer-mail-link,
 .footer-tel-link {
   font-weight: normal;
@@ -342,6 +493,17 @@ button {
 .footer-tel-link:hover {
   color: var(--accent-color);
 }
+.footer-container {
+  display: flex;
+}
+.footer-join-list {
+  display: flex;
+  justify-content: space-between;
+}
+.footer-join {
+  width: 206px;
+  height: 80px;
+}
 
 /* ======= END FOOTER ======= */
 
@@ -354,15 +516,6 @@ button {
 }
 .name-portfolio {
   display: none;
-}
-
-.filter-portfolio-btn:hover,
-.filter-portfolio-btn:focus {
-  background: var(--accent-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-  color: #ffffff;
 }
 
 .filter-portfolio-name {
@@ -382,9 +535,18 @@ button {
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
-  background: #f5f4fa;
+  /* color: #212121; */
+  /* background: #f5f4fa; */
   border-radius: 4px;
+}
+
+.filter-portfolio-btn:hover,
+.filter-portfolio-btn:focus {
+  background: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
 }
 
 .projects-name {
@@ -413,7 +575,11 @@ button {
   flex-basis: calc((100% - 90px) / 3);
   outline: 1px solid #eeeeee;
 }
-
+.project-item:focus,
+.project-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .project-link {
   display: block;
 }
